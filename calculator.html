@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: #986D64;
+        }
+         #container{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+}
+h1{
+    height:50px;
+    width:300px;
+    background-color: antiquewhite;
+
+}
+
+button{
+    height:50px;
+    width:100px;
+    background-color: rgb(138, 109, 104);
+    border:2px #825B0A solid;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    font-weight: 200;
+
+    
+}
+
+    </style>
+   
+</head>
+<body>
+    <div id="container">
+        <div id="input">
+            <h1 id="enter"></h1>
+        </div>
+        <div id="buttons">
+            <p><button  >C</button>
+            <button >+</button>
+            <button >-</button></p>
+            <p><button >*</button>
+            <button >/</button>
+            <button >%</button></p>
+            <p><button >1</button>
+            <button >2</button>
+            <button >3</button></p>
+            <p><button>4</button>
+            <button>5</button>
+            <button>6</button></p>
+            <p><button>7</button>
+            <button >8</button>
+            <button>9</button></p>
+            <p><button>0</button>
+            <button>.</button>
+            <button>=</button></p>
+        </div>
+    </div>
+    <script>
+    let btn = document.querySelectorAll('button');
+    let input = document.getElementById('enter');
+    btn.forEach(element =>{
+        element.addEventListener("click",(e)=>{
+            console.log(e.target.textContent);
+            
+            if(e.target.textContent === 'C'){
+                input.innerText = " ";
+            }
+            else if(e.target.textContent === '='){
+                input.innerText = eval(input.innerText);
+            }
+            else{
+                input.innerText += e.target.textContent;
+            }
+
+
+        })
+    })
+    </script>
+</body>
+</html>

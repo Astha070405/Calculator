@@ -1,0 +1,28 @@
+body{
+    background-color: #986D64;
+}
+ #container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+height:50px;
+width:300px;
+background-color: antiquewhite;
+
+}
+
+button{
+height:50px;
+width:100px;
+background-color: rgb(138, 109, 104);
+border:2px #825B0A solid;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: larger;
+font-weight: 200;
+
+
+}
